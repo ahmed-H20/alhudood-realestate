@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-gold-50: #fbf8eb;
+  --color-gold-100: #f4ecce;
+  --color-gold-200: #e9d99d;
+  --color-gold-300: #dbbe63;
+  --color-gold-400: #cfab3f;
+  --color-gold-500: #d4af37; /* #D4AF37 (Luxury Gold) */
+  --color-gold-600: #a78224;
+  --color-gold-700: #7f601b;
+  --color-gold-800: #574115;
+  --color-gold-900: #3c2d0f;
+
+  --color-navy-50: #e6e8ee;
+  --color-navy-100: #c1c5d5;
+  --color-navy-200: #989fb9;
+  --color-navy-300: #6f799c;
+  --color-navy-400: #515c86;
+  --color-navy-500: #2b355d;
+  --color-navy-600: #21294a;
+  --color-navy-700: #171d37;
+  --color-navy-800: #0e1224;
+  --color-navy-900: #0a0f1c; /* #0A0F1C (Deep Navy) */
+
+  --color-ivory-50: #faf9f6;
+  --color-ivory-100: #f5f1e8; /* #F5F1E8 (Warm Ivory) */
+  --color-ivory-200: #ebe4d2;
+  --color-ivory-300: #ddd3ba;
+  --color-ivory-400: #cebe9e;
+  --color-ivory-500: #bfa882;
+
+  --font-cairo: 'Cairo', sans-serif;
+  --font-tajawal: 'Tajawal', sans-serif;
+}
+
+:root {
+  --background: #0a0f1c;
+  --foreground: #f5f1e8;
+}
+
+body {
+  background-color: #0a0f1c;
+  color: #f5f1e8;
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0f1c;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 3px;
+}
+
+/* Lenis-specific class declarations for smooth scrolling */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
